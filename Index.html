@@ -1,0 +1,633 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI PRINCESA❤️</title>
+
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <section class="hero">
+
+        <!-- Elementos decorativos -->
+        <div class="heart h1">💗</div>
+        <div class="heart h2">💖</div>
+        <div class="heart h3">💕</div>
+
+        <div class="star s1">✦</div>
+        <div class="star s2">✧</div>
+        <div class="star s3">✦</div>
+
+        <div class="content">
+
+            <p class="subtitle">Feliz Cumpleañoss</p>
+
+            <h1>MI PRINCESA</h1>
+
+            <p class="message">
+                Preparé esta pequeña experiencia, solo quiero que te sumerjas en esto
+                y simplemente mires y detalles cada cosita que hice con todo el amor del mundooo ✨
+            </p>
+
+            <p class="message">
+                De: Juan
+            </p>
+
+            <p class="message">
+                Para: Vale💗
+            </p>
+
+            <button id="startButton">
+                Entrar a tu regalo 🎀
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CARTA ================= -->
+
+    <section class="letter-section" id="letter">
+
+        <!-- Decoraciones laterales -->
+
+        <div class="letter-decoration decoration-1">♡</div>
+        <div class="letter-decoration decoration-2">✦</div>
+        <div class="letter-decoration decoration-3">✧</div>
+        <div class="letter-decoration decoration-4">♡</div>
+        <div class="letter-decoration decoration-5">✦</div>
+        <div class="letter-decoration decoration-6">♡</div>
+        <div class="letter-decoration decoration-7">✧</div>
+        <div class="letter-decoration decoration-8">♡</div>
+        <div class="letter-decoration decoration-9">✦</div>
+        <div class="letter-decoration decoration-10">♡</div>
+
+        <!-- Líneas decorativas -->
+
+        <div class="letter-line letter-line-left"></div>
+        <div class="letter-line letter-line-right"></div>
+
+        <div class="letter-content">
+
+            <div class="letter-top-decoration">
+                <span>♡</span>
+                <span>✦</span>
+                <span>♡</span>
+            </div>
+
+            <h2 class="letter-title">
+                Tengo algo que decirte 💌
+            </h2>
+
+            <p class="letter-subtitle">
+                Toca el sobre para descubrirlo
+            </p>
+
+            <div class="envelope" id="envelope">
+
+                <!-- Parte trasera -->
+                <div class="envelope-back"></div>
+
+                <!-- Carta -->
+                <div class="letter-paper" id="paper">
+
+                    <h3>Para ti ❤️</h3>
+
+                    <p id="typedText"></p>
+
+                    <button class="next-button" id="videoButton">
+                        Tengo algo más para ti... 🎬
+                    </button>
+
+                </div>
+
+                <!-- Parte delantera -->
+                <div class="envelope-front"></div>
+
+                <!-- Tapa -->
+                <div class="envelope-flap"></div>
+
+            </div>
+
+            <div class="letter-bottom-decoration">
+
+                <span>♡</span>
+
+                <div></div>
+
+                <span>✦</span>
+
+                <div></div>
+
+                <span>♡</span>
+
+            </div>
+
+            <p class="click-hint" id="clickHint">
+                Toca el sobre 💗
+            </p>
+
+        </div>
+
+    </section>
+    <!-- ========================= -->
+    <!-- VIDEO -->
+    <!-- ========================= -->
+
+    <section class="video-section" id="video">
+
+        <!-- Decoraciones del fondo -->
+
+        <div class="video-bg-decoration video-bg-1">♡</div>
+        <div class="video-bg-decoration video-bg-2">✦</div>
+        <div class="video-bg-decoration video-bg-3">✧</div>
+        <div class="video-bg-decoration video-bg-4">♡</div>
+        <div class="video-bg-decoration video-bg-5">✦</div>
+        <div class="video-bg-decoration video-bg-6">♡</div>
+
+        <div class="video-content">
+
+            <div class="video-top-decoration">
+                <span>♡</span>
+                <span>✦</span>
+                <span>♡</span>
+            </div>
+
+
+            <h2 class="video-title">
+                "Algunos recuerdos merecen ser vistos
+                una y otra vez..."
+            </h2>
+
+
+            <div class="video-decoration">
+
+                <span>♡</span>
+                <span>✦</span>
+                <span>♡</span>
+                <span>✦</span>
+                <span>♡</span>
+                <span>✧</span>
+                <span>♡</span>
+                <span>✦</span>
+
+            </div>
+
+            <div class="video-frame">
+
+                <div class="video-card">
+
+                    <div class="video-card-top">
+                        <span>♡</span>
+                        <span>♡</span>
+                    </div>
+
+                    <video
+                        id="memoryVideo"
+                        controls
+                        playsinline
+                        preload="metadata"
+                    >
+
+                        <source
+                            src="assets/video/video.mp4"
+                            type="video/mp4"
+                        >
+
+                        Tu navegador no puede reproducir este video.
+
+                    </video>
+
+                </div>
+
+            </div>
+
+            <div class="video-bottom-decoration">
+                <span>♡</span>
+                <span>✦</span>
+                <span>♡</span>
+            </div>
+
+            <div class="video-next" id="videoNext">
+
+                <p class="video-next-message">
+                    Tengo algunas cosas que decirte... 
+                </p>
+
+                <button class="stars-button" id="starsButton">
+                    Descubrir ✦
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- CIELO DE ESTRELLAS -->
+    <!-- ========================= -->
+
+    <section class="stars-section" id="stars">
+
+    <div class="stars-background">
+
+        <!-- ESTRELLAS PEQUEÑAS DE FONDO -->
+
+        <div class="small-star ss1">·</div>
+        <div class="small-star ss2">·</div>
+        <div class="small-star ss3">·</div>
+        <div class="small-star ss4">·</div>
+        <div class="small-star ss5">·</div>
+        <div class="small-star ss6">·</div>
+        <div class="small-star ss7">·</div>
+        <div class="small-star ss8">·</div>
+        <div class="small-star ss9">·</div>
+        <div class="small-star ss10">·</div>
+        <div class="small-star ss11">·</div>
+        <div class="small-star ss12">·</div>
+        <div class="small-star ss13">·</div>
+        <div class="small-star ss14">·</div>
+        <div class="small-star ss15">·</div>
+        
+        <!-- ESTRELLAS INTERACTIVAS -->
+
+        <div class="star star-1" id="star1">✦</div>
+
+        <div class="star star-2" id="star2">✦</div>
+
+        <div class="star star-3" id="star3">✧</div>
+
+        <div class="star star-4" id="star4">✦</div>
+
+        <div class="star star-5" id="star5">✧</div>
+
+        <div class="star star-6" id="star6">✦</div>
+
+        <div class="star star-7" id="star7">✧</div>
+
+        <div class="star star-8" id="star8">✦</div>
+
+        <div class="star star-9" id="star9">✧</div>
+
+        <div class="star star-10" id="star10">✦</div>
+
+        <div class="stars-header">
+
+
+            <h2 class="stars-title">
+                Hay algunas cosas
+                que todavía quiero decirte
+            </h2>
+
+            <p class="stars-instruction">
+                Toca una estrella para descubrirlas 💗
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- MENSAJE DE ESTRELLA -->
+    <!-- ========================= -->
+
+    <div class="star-message-overlay" id="starMessage">
+
+        <div class="star-message-card">
+
+            <button
+                class="close-star-message"
+                id="closeStarMessage"
+                aria-label="Cerrar mensaje"
+            >
+                ×
+            </button>
+
+            <div class="message-star">
+                ✦
+            </div>
+
+            <p class="star-message-text" id="starMessageText">
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ================================= -->
+    <!-- FINAL DEL CIELO DE ESTRELLAS -->
+    <!-- ================================= -->
+
+    <div class="stars-complete" id="starsComplete">
+
+        <p class="stars-complete-message">
+            Descubriste todos mis secretos... 
+        </p>
+
+        <button class="spotify-next-button" id="spotifyNextButton">
+            Hay algo que quiero que escuches 🎵
+        </button>
+
+    </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- SPOTIFY -->
+    <!-- ========================= -->
+
+    <section class="spotify-section" id="spotify">
+
+        <!-- Decoraciones -->
+
+        <div class="spotify-bg-decoration spotify-bg-1">♡</div>
+        <div class="spotify-bg-decoration spotify-bg-2">✦</div>
+        <div class="spotify-bg-decoration spotify-bg-3">✧</div>
+        <div class="spotify-bg-decoration spotify-bg-4">♡</div>
+        <div class="spotify-bg-decoration spotify-bg-5">✦</div>
+        <div class="spotify-bg-decoration spotify-bg-6">♡</div>
+
+        <div class="spotify-content">
+
+            <div class="spotify-top-decoration">
+                <span>♡</span>
+                <span>✦</span>
+                <span>♡</span>
+            </div>
+
+            <h2 class="spotify-title">
+                "Porque hay canciones que simplemente
+                me hacen pensar en ti..."
+            </h2>
+
+            <div class="spotify-card">
+
+                <h3>
+                    💗
+                </h3>
+
+                <p class="spotify-card-text">
+                    Una pequeña colección de canciones
+                    que preparé pensando en ti.
+                </p>
+
+                <a
+                    href="https://open.spotify.com/playlist/3luhlvfazuDSdRZI5qlNTZ?si=59bcd7d4d66f45f7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="spotify-button"
+                >
+                    <span class="spotify-button-icon">♫</span>
+                    Escuchar en Spotify
+                </a>
+
+            </div>
+
+            <div class="spotify-bottom-decoration">
+                <span>♡</span>
+                <span>✦</span>
+                <span>♡</span>
+            </div>
+
+            <button
+                class="orion-next-button"
+                id="orionNextButton"
+            >
+                Tengo otra sorpresa para ti... 🐾
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- ORIÓN -->
+    <!-- ========================= -->
+
+    <section class="orion-section" id="orion">
+
+        <div class="orion-content">
+
+            <p class="orion-small-title">
+                Un mensajito especial 🐾
+            </p>
+
+            <h2 class="orion-title">
+                Orión también tiene
+                algo que decirte...
+            </h2>
+
+            <p class="orion-description">
+                Pero primero creo que necesita
+                un poquito de amor. 💗
+            </p>
+
+            <!-- Imagen de Orión -->
+
+            <div class="orion-image-container">
+
+                <img
+                    id="orionImage"
+                    src="assets/images/orion-comiendo.jpg"
+                    alt="Orión"
+                    class="orion-image"
+                >
+
+            </div>
+
+            <!-- Botón -->
+
+            <button
+                class="orion-feed-button"
+                id="orionFeedButton"
+            >
+                🍖 Dale comida a Orión 💗
+            </button>
+
+            <!-- Mensaje que aparecerá después -->
+
+            <div
+                class="orion-reaction"
+                id="orionReaction"
+            >
+
+                <p>
+                    Creo que ahora sí quiere
+                    hablar contigo... 🥹
+                </p>
+
+                <button
+                    class="orion-message-button"
+                    id="orionMessageButton"
+                >
+                    ¿Qué quiere decir Orión? 🐾
+                </button>
+
+            </div>
+
+            <!-- ================================= -->
+            <!-- MENSAJE FINAL DE ORIÓN -->
+            <!-- ================================= -->
+
+            <div class="orion-final" id="orionFinal">
+
+                <p class="orion-final-message">
+                    ¡Feliz cumpleaños, mamá! 🎂💗
+                </p>
+
+                <p class="orion-final-love">
+                    Te amo mucho. ❤️
+                </p>
+
+                <span class="orion-signature">
+                    — Orión 🐾
+                </span>
+
+                <button
+                    class="orion-final-button"
+                    id="orionFinalButton"
+                >
+                    Orión dice que hay algo más... 🌙
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- PANTALLA ESTRELLA FINAL -->
+    <!-- ========================= -->
+
+    <section class="final-section" id="final">
+
+        <div class="final-content">
+
+            <p class="final-small-title">
+                Antes de terminar... 🌙
+            </p>
+
+            <h2 class="final-title">
+                Ahora quiero que mires una última cosa
+            </h2>
+
+            <p class="final-instruction">
+                Toca la estrella cuando estés lista.
+            </p>
+
+            <button
+                class="final-star"
+                id="finalStar"
+                aria-label="Abrir mensaje final"
+            >
+                ✦
+            </button>
+
+        </div>
+
+    </section>
+
+        <!-- ========================= -->
+        <!-- VIDEO FINAL -->
+        <!-- ========================= -->
+
+        <section class="final-video-section" id="finalVideoSection">
+
+            <div class="final-video-content">
+
+                <p class="final-video-message">
+                    Un video muy personal pero con los sentimientos mas sinceros...
+                </p>
+
+                <div class="final-video-card">
+
+                    <video
+                        id="finalMemoryVideo"
+                        controls
+                        playsinline
+                        preload="metadata"
+                    >
+
+                        <source
+                            src="assets/video/video-final.mp4"
+                            type="video/mp4"
+                        >
+
+                        Tu navegador no puede reproducir este video.
+
+                    </video>
+
+                </div>
+
+                <p class="final-video-hint">
+                    Mira hasta el final. 
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- MENSAJE FINAL -->
+        <!-- ========================= -->
+
+        <section class="goodbye-section" id="goodbye">
+
+            <div class="goodbye-content">
+
+                <div class="goodbye-heart">
+                    ♥
+                </div>
+
+                <p class="goodbye-small">
+                    Y ahora sí...
+                </p>
+
+                <h2 class="goodbye-title">
+                    Feliz cumpleaños,
+                    mi princesa...
+                </h2>
+
+                <p class="goodbye-message">
+                    Gracias por cada sonrisa, cada abrazo, cada momento y cada recuerdo que has dejado en mi vida.
+                    
+                    No sé qué nos depare el futuro, pero sí sé algo:
+                    hay una parte de mi corazón que siempre va a llevar tu nombre.
+
+                    Hoy, en tu cumpleaños, solamente quiero que estes feliz y la pases super bien y aunque me hubiera encantado estar contigo, desde la distancia
+                    celebraré y estaré super feliz por ti y quiero que recuerdes lo importante que eres para mí.
+                    No solamente hoy, sino todos los días.
+
+                    Espero que nunca olvides cuánto te amo y
+                    cuánto me importas.
+
+                    Y entre todas las personas, todos los lugares y todas las historias posibles...
+                    volvería a elegirte a ti.
+
+                    Feliz cumpleaños, amor de mi alma. 🎂💗
+
+                </p>
+
+                <p class="goodbye-love">
+                    Te amo 3 millones. ❤️
+                </p>
+
+            </div>
+
+        </section>
+
+    <script src="js/main.js"></script>
+    <script src="js/stars.js"></script>
+</body>
+</html>

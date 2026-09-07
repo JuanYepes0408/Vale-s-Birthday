@@ -1,0 +1,4809 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+.hero,
+.letter-section,
+.video-section,
+.stars-section{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+}
+
+.hero{
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+
+    background:linear-gradient(
+        135deg,
+        #ffd6e8,
+        #ffc2df,
+        #f7b5ff
+    );
+}
+
+.content{
+    position:relative;
+    z-index:10;
+    width:90%;
+    max-width:500px;
+}
+
+.subtitle{
+    font-size:1rem;
+    letter-spacing:4px;
+    color:#c2185b;
+    margin-bottom:10px;
+}
+
+h1{
+    font-family:'Dancing Script',cursive;
+    font-size:4rem;
+    color:white;
+    text-shadow:0 4px 12px rgba(0,0,0,.18);
+}
+
+.message{
+    margin:25px 0;
+    font-size:1rem;
+    line-height:1.8;
+    color:#7a1f53;
+}
+
+#startButton{
+    border:none;
+    background:white;
+    color:#e91e63;
+
+    padding:16px 34px;
+
+    font-size:1rem;
+    font-weight:600;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(233,30,99,.25);
+}
+
+#startButton:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 15px 35px rgba(233,30,99,.35);
+}
+
+.heart{
+    position:absolute;
+    user-select:none;
+    pointer-events:none;
+}
+
+.star{
+    position:absolute;
+    user-select:none;
+    pointer-events:auto;
+}
+
+.heart{
+    font-size:2rem;
+    opacity:.7;
+}
+
+.star{
+    color:white;
+    font-size:1.4rem;
+}
+
+.h1{top:12%; left:10%;}
+.h2{top:70%; right:12%;}
+.h3{bottom:18%; left:18%;}
+
+.s1{top:18%; right:20%;}
+.s2{bottom:30%; right:28%;}
+.s3{top:55%; left:8%;}
+
+@media(max-width:600px){
+
+    h1{
+        font-size:3rem;
+    }
+
+    .message{
+        font-size:.95rem;
+    }
+
+    #startButton{
+        width:100%;
+    }
+
+}
+
+/* ========================= */
+/* CARTA */
+/* ========================= */
+
+.letter-section{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:60px 20px;
+
+    background:
+    radial-gradient(
+        circle at 15% 20%,
+        rgba(255,182,218,.55),
+        transparent 28%
+    ),
+    radial-gradient(
+        circle at 85% 75%,
+        rgba(244,143,177,.42),
+        transparent 32%
+    ),
+    linear-gradient(
+        135deg,
+        #ffe4f1,
+        #ffd1e5,
+        #fff0f7,
+        #fdd7e9
+    );
+
+    overflow:hidden;
+}
+
+.letter-content{
+    width:100%;
+    max-width:700px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    text-align:center;
+}
+
+/* ========================= */
+/* TÍTULO */
+/* ========================= */
+
+.letter-title{
+    margin:0;
+
+    font-family:'Dancing Script', cursive;
+    font-size:3.3rem;
+
+    color:#d81b60;
+
+    text-shadow:
+        0 4px 14px rgba(216,27,96,.12);
+}
+
+.letter-subtitle{
+    margin-top:8px;
+    margin-bottom:70px;
+
+    color:#8e2455;
+
+    font-size:1rem;
+
+    opacity:.9;
+}
+
+/* ========================= */
+/* SOBRE */
+/* ========================= */
+
+.envelope{
+    position:relative;
+
+    width:420px;
+    height:300px;
+
+    perspective:1200px;
+
+    cursor:pointer;
+
+    margin-bottom:35px;
+
+    filter:
+        drop-shadow(
+            0 22px 30px rgba(214,27,96,.12)
+        );
+}
+
+/* ========================= */
+/* PARTE TRASERA */
+/* ========================= */
+
+.envelope-back{
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f9b4d2,
+            #f39ac3
+        );
+
+    border-radius:16px;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.55),
+        inset 0 -10px 20px rgba(190,24,93,.08);
+}
+
+/* Brillo sutil */
+
+.envelope-back::before{
+    content:"";
+
+    position:absolute;
+
+    top:12px;
+    left:16px;
+    right:16px;
+
+    height:45%;
+
+    border-radius:12px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.16),
+            transparent
+        );
+
+    pointer-events:none;
+}
+
+/* ========================= */
+/* CARTA DE PAPEL */
+/* ========================= */
+
+.letter-paper{
+    position:absolute;
+
+    left:6%;
+    top:8%;
+
+    width:88%;
+    height:260px;
+
+    padding:26px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #fffafb
+        );
+
+    border-radius:12px;
+
+    border:1px solid rgba(236,95,154,.08);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.10),
+        0 2px 5px rgba(216,27,96,.06);
+
+    z-index:2;
+
+    opacity:1;
+
+    transform:translateY(75px);
+
+    transition:
+        transform 1.2s cubic-bezier(.22,.8,.25,1),
+        z-index 0s 0.4s;
+
+    overflow-y:auto;
+
+    text-align:left;
+
+    scrollbar-width:thin;
+    scrollbar-color:#f3a2c5 transparent;
+}
+
+/* Pequeña textura de papel */
+
+.letter-paper::before{
+    content:"";
+
+    position:absolute;
+
+    top:12px;
+    left:12px;
+    right:12px;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(236,95,154,.22),
+            transparent
+        );
+
+    pointer-events:none;
+}
+
+/* ========================= */
+/* TÍTULO DE LA CARTA */
+/* ========================= */
+
+.letter-paper h3{
+    margin:0 0 15px;
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:2rem;
+
+    color:#e91e63;
+
+    text-align:center;
+}
+
+/* ========================= */
+/* TEXTO */
+/* ========================= */
+
+.letter-paper p{
+    margin:0;
+
+    color:#5a3550;
+
+    font-size:.95rem;
+
+    line-height:1.8;
+
+    white-space:pre-line;
+}
+
+/* ========================= */
+/* PARTE DELANTERA DEL SOBRE */
+/* ========================= */
+
+.envelope-front{
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+    height:165px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ef72a8,
+            #e95692
+        );
+
+    clip-path:polygon(
+        0 0,
+        50% 58%,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+
+    border-radius:
+        0 0 16px 16px;
+
+    z-index:5;
+
+    transition:
+        z-index 0s .9s;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.20);
+}
+
+/* ========================= */
+/* TAPA DEL SOBRE */
+/* ========================= */
+
+.envelope-flap{
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:165px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f7a1bd,
+            #f38aae
+        );
+
+    clip-path:polygon(
+        0 0,
+        50% 100%,
+        100% 0
+    );
+
+    transform-origin:top center;
+
+    transform:rotateX(0deg);
+
+    transition:
+        transform 1s cubic-bezier(.4,0,.2,1);
+
+    z-index:7;
+
+    backface-visibility:hidden;
+
+    box-shadow:
+        inset 0 -1px 0 rgba(255,255,255,.20);
+}
+
+/* Corazón del sobre */
+
+.envelope-flap::after{
+    content:"♥";
+
+    position:absolute;
+
+    left:50%;
+    bottom:18px;
+
+    transform:translateX(-50%);
+
+    font-size:1.3rem;
+
+    color:rgba(255,255,255,.88);
+
+    text-shadow:
+        0 3px 8px rgba(190,24,93,.18);
+
+    pointer-events:none;
+}
+
+/* ========================= */
+/* ESTADO ABIERTO */
+/* ========================= */
+
+.envelope.open .envelope-flap{
+    transform:rotateX(180deg);
+}
+
+.envelope.open .letter-paper{
+    z-index:8;
+
+    transform:translateY(-145px);
+
+    transition:
+        transform 1.2s cubic-bezier(.22,.8,.25,1),
+        z-index 0s;
+}
+
+.envelope.open .envelope-front{
+    z-index:4;
+}
+
+/* ========================= */
+/* TEXTO DE AYUDA */
+/* ========================= */
+
+.click-hint{
+    margin:0;
+
+    color:#be185d;
+
+    font-size:.9rem;
+
+    animation:pulseHint 2s ease-in-out infinite;
+}
+
+/* ========================= */
+/* BOTÓN SIGUIENTE */
+/* ========================= */
+
+.next-button{
+    display:none;
+
+    margin:25px auto 0;
+
+    padding:13px 24px;
+
+    border:none;
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ef72a8,
+            #e75492
+        );
+
+    color:white;
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:.85rem;
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 8px 20px rgba(236,95,154,.22);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.next-button:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 12px 26px rgba(236,95,154,.32);
+}
+
+.next-button.show{
+    display:block;
+
+    animation:
+        fadeUpButton .8s ease;
+}
+
+/* ========================= */
+/* ANIMACIONES */
+/* ========================= */
+
+@keyframes pulseHint{
+
+    0%,100%{
+        opacity:.5;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+}
+
+@keyframes fadeUpButton{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:600px){
+
+    .letter-section{
+        padding:50px 15px;
+    }
+
+    .letter-title{
+        font-size:2.5rem;
+
+        line-height:1.15;
+    }
+
+    .letter-subtitle{
+        font-size:.9rem;
+
+        margin-top:8px;
+        margin-bottom:55px;
+    }
+
+    .envelope{
+        width:min(90vw,330px);
+
+        height:240px;
+
+        margin-bottom:30px;
+    }
+
+    .letter-paper{
+
+        height:210px;
+
+        padding:20px;
+
+        border-radius:10px;
+    }
+
+    .letter-paper h3{
+
+        font-size:1.7rem;
+
+        margin-bottom:12px;
+    }
+
+    .letter-paper p{
+
+        font-size:.82rem;
+
+        line-height:1.65;
+    }
+
+    .envelope-front,
+    .envelope-flap{
+
+        height:135px;
+    }
+
+    .envelope-flap::after{
+
+        bottom:14px;
+
+        font-size:1.05rem;
+    }
+
+    .envelope.open .letter-paper{
+
+        transform:translateY(-120px);
+    }
+
+    .click-hint{
+        font-size:.82rem;
+    }
+
+    .next-button{
+
+        width:100%;
+
+        max-width:240px;
+
+        padding:12px 18px;
+
+        font-size:.82rem;
+    }
+}
+
+/* ========================= */
+/* DECORACIONES */
+/* ========================= */
+
+.letter-section{
+    position:relative;
+}
+
+.letter-label{
+    margin:0 0 8px;
+
+    font-size:.75rem;
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    color:#c0266d;
+
+    opacity:.75;
+}
+
+/* Elementos flotantes */
+
+.letter-decoration{
+    position:absolute;
+
+    color:#ec5f9a;
+
+    opacity:.45;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    animation:
+        letterFloat 5s ease-in-out infinite;
+}
+
+.decoration-1{
+    top:14%;
+    left:12%;
+    font-size:1.5rem;
+}
+
+.decoration-2{
+    top:25%;
+    left:23%;
+    font-size:.9rem;
+    animation-delay:1s;
+}
+
+.decoration-3{
+    top:18%;
+    right:14%;
+    font-size:1.8rem;
+    animation-delay:2s;
+}
+
+.decoration-4{
+    top:34%;
+    right:25%;
+    font-size:.8rem;
+    animation-delay:.5s;
+}
+
+.decoration-5{
+    bottom:18%;
+    left:17%;
+    font-size:1.3rem;
+    animation-delay:2.5s;
+}
+
+.decoration-6{
+    bottom:25%;
+    left:28%;
+    font-size:.8rem;
+    animation-delay:1.5s;
+}
+
+.decoration-7{
+    bottom:15%;
+    right:14%;
+    font-size:1.6rem;
+    animation-delay:3s;
+}
+
+.decoration-8{
+    bottom:28%;
+    right:27%;
+    font-size:.8rem;
+    animation-delay:1.2s;
+}
+
+/* Decoración debajo del sobre */
+
+.letter-bottom-decoration{
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:14px;
+
+    margin:0 0 12px;
+
+    color:#e75492;
+
+    font-size:.8rem;
+
+    opacity:.65;
+}
+
+.letter-bottom-decoration span:nth-child(2){
+    font-size:.55rem;
+}
+
+/* Movimiento */
+
+@keyframes letterFloat{
+
+    0%,100%{
+        transform:translateY(0) rotate(0deg);
+    }
+
+    50%{
+        transform:translateY(-10px) rotate(4deg);
+    }
+
+}
+
+/* ========================= */
+/* CELULAR */
+/* ========================= */
+
+@media(max-width:600px){
+
+    .letter-label{
+        font-size:.68rem;
+        letter-spacing:2px;
+    }
+
+    .letter-decoration{
+        opacity:.32;
+    }
+
+    .decoration-1{
+        top:13%;
+        left:7%;
+    }
+
+    .decoration-2{
+        top:24%;
+        left:10%;
+    }
+
+    .decoration-3{
+        top:15%;
+        right:7%;
+    }
+
+    .decoration-4{
+        top:29%;
+        right:8%;
+    }
+
+    .decoration-5{
+        bottom:16%;
+        left:8%;
+    }
+
+    .decoration-6{
+        bottom:24%;
+        left:12%;
+    }
+
+    .decoration-7{
+        bottom:14%;
+        right:8%;
+    }
+
+    .decoration-8{
+        bottom:26%;
+        right:12%;
+    }
+
+}
+
+/* ========================= */
+/* ESCENA DE LA CARTA */
+/* ========================= */
+
+.letter-section{
+    position:relative;
+}
+
+/* ========================= */
+/* DECORACIÓN SUPERIOR */
+/* ========================= */
+
+.letter-top-decoration{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:16px;
+
+    margin-bottom:15px;
+
+    color:#e75492;
+
+    font-size:.9rem;
+
+    opacity:.65;
+}
+
+.letter-top-decoration span:nth-child(2){
+    font-size:.55rem;
+}
+
+/* ========================= */
+/* ETIQUETA */
+/* ========================= */
+
+.letter-label{
+    margin:0 0 6px;
+
+    font-size:.7rem;
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    color:#be185d;
+
+    opacity:.7;
+}
+
+/* ========================= */
+/* DECORACIONES */
+/* ========================= */
+
+.letter-decoration{
+    position:absolute;
+
+    z-index:0;
+
+    color:#e83e8c;
+
+    text-shadow:
+        0 0 10px rgba(232,62,140,.25),
+        0 0 22px rgba(232,62,140,.15);
+
+    pointer-events:none;
+    user-select:none;
+
+    opacity:.58;
+
+    animation:
+        letterFloat 5s ease-in-out infinite;
+}
+
+/* Izquierda */
+
+.decoration-1{
+    top:15%;
+    left:10%;
+
+    font-size:2rem;
+}
+
+.decoration-2{
+    top:25%;
+    left:19%;
+
+    font-size:.9rem;
+
+    animation-delay:1s;
+}
+
+.decoration-3{
+    top:39%;
+    left:8%;
+
+    font-size:.75rem;
+
+    animation-delay:2s;
+}
+
+.decoration-4{
+    top:51%;
+    left:17%;
+
+    font-size:1.5rem;
+
+    animation-delay:3s;
+}
+
+.decoration-5{
+    bottom:16%;
+    left:10%;
+
+    font-size:.85rem;
+
+    animation-delay:1.5s;
+}
+
+/* Derecha */
+
+.decoration-6{
+    top:16%;
+    right:10%;
+
+    font-size:1.9rem;
+
+    animation-delay:2.5s;
+}
+
+.decoration-7{
+    top:29%;
+    right:18%;
+
+    font-size:.8rem;
+
+    animation-delay:.8s;
+}
+
+.decoration-8{
+    top:43%;
+    right:8%;
+
+    font-size:1.5rem;
+
+    animation-delay:3s;
+}
+
+.decoration-9{
+    top:55%;
+    right:18%;
+
+    font-size:.75rem;
+
+    animation-delay:1.2s;
+}
+
+.decoration-10{
+    bottom:15%;
+    right:10%;
+
+    font-size:2rem;
+
+    animation-delay:2s;
+}
+
+/* ========================= */
+/* LÍNEAS DECORATIVAS */
+/* ========================= */
+
+.letter-line{
+    position:absolute;
+
+    top:50%;
+
+    width:120px;
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(236,95,154,.35),
+            transparent
+        );
+
+    opacity:.7;
+}
+
+.letter-line-left{
+    left:4%;
+}
+
+.letter-line-right{
+    right:4%;
+}
+
+/* ========================= */
+/* DECORACIÓN INFERIOR */
+/* ========================= */
+
+.letter-bottom-decoration{
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    margin:4px 0 13px;
+
+    color:#e75492;
+
+    opacity:.55;
+}
+
+.letter-bottom-decoration div{
+    width:35px;
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(236,95,154,.5),
+            transparent
+        );
+}
+
+.letter-bottom-decoration span:nth-child(2){
+    font-size:.6rem;
+}
+
+/* ========================= */
+/* ANIMACIÓN */
+/* ========================= */
+
+@keyframes letterFloat{
+
+    0%,100%{
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50%{
+        transform:
+            translateY(-12px)
+            rotate(5deg);
+    }
+
+}
+
+/* ========================= */
+/* CELULAR */
+/* ========================= */
+
+@media(max-width:600px){
+
+    .letter-top-decoration{
+        margin-bottom:10px;
+    }
+
+    .letter-label{
+        font-size:.62rem;
+        letter-spacing:2px;
+    }
+
+    .letter-decoration{
+        opacity:.3;
+    }
+
+    .decoration-1{
+        top:13%;
+        left:5%;
+        font-size:1.5rem;
+    }
+
+    .decoration-2{
+        top:24%;
+        left:12%;
+    }
+
+    .decoration-3{
+        top:37%;
+        left:4%;
+    }
+
+    .decoration-4{
+        top:52%;
+        left:8%;
+        font-size:1.2rem;
+    }
+
+    .decoration-5{
+        bottom:14%;
+        left:5%;
+    }
+
+    .decoration-6{
+        top:14%;
+        right:5%;
+        font-size:1.5rem;
+    }
+
+    .decoration-7{
+        top:27%;
+        right:10%;
+    }
+
+    .decoration-8{
+        top:43%;
+        right:4%;
+        font-size:1.2rem;
+    }
+
+    .decoration-9{
+        top:54%;
+        right:9%;
+    }
+
+    .decoration-10{
+        bottom:14%;
+        right:5%;
+        font-size:1.5rem;
+    }
+
+    .letter-line{
+        width:45px;
+        opacity:.45;
+    }
+
+    .letter-line-left{
+        left:0;
+    }
+
+    .letter-line-right{
+        right:0;
+    }
+
+}
+
+/* ========================= */
+/* VIDEO */
+/* ========================= */
+
+.video-section{
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:70px 20px;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255,190,220,.55),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(217,70,239,.16),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #fff0f7,
+            #ffdbea,
+            #fce7f3,
+            #f9e4ff
+        );
+}
+
+.video-content{
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+    max-width:900px;
+
+    opacity:0;
+    transform:translateY(35px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.video-section.visible .video-content{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ========================= */
+/* DECORACIÓN SUPERIOR */
+/* ========================= */
+
+.video-top-decoration{
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:12px;
+
+    color:#e83e8c;
+
+    font-size:.85rem;
+
+    opacity:.65;
+}
+
+.video-top-decoration span:nth-child(2){
+    font-size:.55rem;
+}
+
+/* ========================= */
+/* TÍTULOS */
+/* ========================= */
+
+.video-small-title{
+    margin:0 0 8px;
+
+    color:#db2777;
+
+    font-size:.85rem;
+
+    letter-spacing:2.5px;
+
+    text-transform:uppercase;
+}
+
+.video-title{
+    max-width:650px;
+
+    margin:0 auto;
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:3.2rem;
+
+    line-height:1.15;
+
+    color:#831843;
+
+    text-shadow:
+        0 4px 15px rgba(131,24,67,.10);
+}
+
+.video-intro{
+    max-width:450px;
+
+    margin:15px auto 18px;
+
+    color:#8e2455;
+
+    font-size:.9rem;
+
+    line-height:1.7;
+
+    opacity:.85;
+}
+
+/* ========================= */
+/* DECORACIÓN CENTRAL */
+/* ========================= */
+
+.video-decoration{
+    display:flex;
+
+    flex-direction:row;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:18px;
+
+    width:100%;
+
+    margin:18px auto 28px;
+
+    color:#e83e8c;
+
+    font-size:1.15rem;
+
+    white-space:nowrap;
+}
+
+.video-decoration span{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+
+    animation:
+        videoSparkle 3s ease-in-out infinite;
+}
+
+.video-decoration span:nth-child(2){
+    animation-delay:.3s;
+}
+
+.video-decoration span:nth-child(3){
+    animation-delay:.6s;
+}
+
+.video-decoration span:nth-child(4){
+    animation-delay:.9s;
+}
+
+.video-decoration span:nth-child(5){
+    animation-delay:1.2s;
+}
+
+.video-decoration span:nth-child(6){
+    animation-delay:1.5s;
+}
+
+.video-decoration span:nth-child(7){
+    animation-delay:1.8s;
+}
+
+.video-decoration span:nth-child(8){
+    animation-delay:2.1s;
+}
+
+/* ========================= */
+/* MARCO DEL VIDEO */
+/* ========================= */
+
+.video-frame{
+    position:relative;
+
+    width:100%;
+    max-width:790px;
+
+    margin:auto;
+
+    padding:14px;
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.95),
+            rgba(255,230,241,.85)
+        );
+
+    box-shadow:
+        0 25px 60px rgba(190,24,93,.16),
+        0 0 0 1px rgba(255,255,255,.95),
+        0 0 0 8px rgba(236,95,154,.07);
+}
+
+/* ========================= */
+/* TARJETA DEL VIDEO */
+/* ========================= */
+
+.video-card{
+    position:relative;
+
+    width:100%;
+
+    padding:10px;
+
+    border-radius:20px;
+
+    background:#fff;
+
+    box-shadow:
+        0 10px 30px rgba(190,24,93,.10);
+
+    overflow:hidden;
+}
+
+/* Cabecera pequeña */
+
+.video-card-top{
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    padding:5px 8px 10px;
+
+    color:#be185d;
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:1rem;
+}
+
+/* Video */
+
+.video-card video{
+    display:block;
+
+    width:100%;
+    max-width:100%;
+
+    height:auto;
+
+    max-height:65vh;
+
+    object-fit:contain;
+
+    margin:0 auto;
+
+    border-radius:15px;
+
+    background:#181218;
+}
+
+/* ========================= */
+/* DECORACIÓN INFERIOR */
+/* ========================= */
+
+.video-bottom-decoration{
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:14px;
+
+    margin-top:18px;
+
+    color:#e83e8c;
+
+    font-size:.8rem;
+
+    opacity:.55;
+}
+
+/* ========================= */
+/* DECORACIONES DEL FONDO */
+/* ========================= */
+
+.video-bg-decoration{
+    position:absolute;
+
+    z-index:1;
+
+    pointer-events:none;
+    user-select:none;
+
+    color:#e83e8c;
+
+    opacity:.30;
+
+    text-shadow:
+        0 0 15px rgba(232,62,140,.18);
+
+    animation:
+        videoFloat 6s ease-in-out infinite;
+}
+
+.video-bg-1{
+    top:12%;
+    left:8%;
+    font-size:2rem;
+}
+
+.video-bg-2{
+    top:25%;
+    left:20%;
+    font-size:.8rem;
+    animation-delay:1s;
+}
+
+.video-bg-3{
+    top:17%;
+    right:10%;
+    font-size:1.4rem;
+    animation-delay:2s;
+}
+
+.video-bg-4{
+    top:42%;
+    right:7%;
+    font-size:2rem;
+    animation-delay:3s;
+}
+
+.video-bg-5{
+    bottom:18%;
+    left:10%;
+    font-size:1.3rem;
+    animation-delay:1.5s;
+}
+
+.video-bg-6{
+    bottom:13%;
+    right:12%;
+    font-size:1.7rem;
+    animation-delay:2.5s;
+}
+
+/* ========================= */
+/* ANIMACIONES */
+/* ========================= */
+
+@keyframes videoSparkle{
+
+    0%,100%{
+        transform:translateY(0);
+        opacity:.65;
+    }
+
+    50%{
+        transform:translateY(-5px);
+        opacity:1;
+    }
+
+}
+
+@keyframes videoFloat{
+
+    0%,100%{
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50%{
+        transform:
+            translateY(-12px)
+            rotate(5deg);
+    }
+
+}
+
+/* ========================= */
+/* CELULAR */
+/* ========================= */
+
+@media(max-width:600px){
+
+    .video-section{
+        padding:50px 15px;
+    }
+
+    .video-small-title{
+        font-size:.72rem;
+
+        letter-spacing:2px;
+    }
+
+    .video-title{
+        max-width:330px;
+
+        font-size:2.45rem;
+    }
+
+    .video-intro{
+        max-width:300px;
+
+        margin:13px auto 16px;
+
+        font-size:.82rem;
+    }
+
+    .video-decoration{
+        gap:11px;
+
+        margin-bottom:22px;
+
+        font-size:.95rem;
+    }
+
+    .video-frame{
+        width:100%;
+
+        padding:8px;
+
+        border-radius:22px;
+    }
+
+    .video-card{
+        padding:7px;
+
+        border-radius:15px;
+    }
+
+    .video-card-top{
+        padding:3px 5px 8px;
+
+        font-size:.9rem;
+    }
+
+    .video-card video{
+        width:100%;
+
+        max-width:100%;
+
+        max-height:60vh;
+
+        border-radius:11px;
+    }
+
+    .video-bg-decoration{
+        opacity:.22;
+    }
+
+    .video-bg-1{
+        left:4%;
+        top:13%;
+        font-size:1.4rem;
+    }
+
+    .video-bg-2{
+        left:8%;
+        top:27%;
+    }
+
+    .video-bg-3{
+        right:5%;
+        top:15%;
+        font-size:1.1rem;
+    }
+
+    .video-bg-4{
+        right:4%;
+        top:45%;
+        font-size:1.4rem;
+    }
+
+    .video-bg-5{
+        left:5%;
+        bottom:17%;
+    }
+
+    .video-bg-6{
+        right:5%;
+        bottom:13%;
+        font-size:1.3rem;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .video-decoration{
+        gap:11px;
+        margin:12px auto 22px;
+        font-size:.95rem;
+    }
+
+}
+
+.star-1{
+    animation-delay:0s;
+}
+
+.star-2{
+    animation-delay:.4s;
+}
+
+.star-3{
+    animation-delay:.9s;
+}
+
+.star-4{
+    animation-delay:1.3s;
+}
+
+.star-5{
+    animation-delay:.6s;
+}
+
+.star-6{
+    animation-delay:1.7s;
+}
+
+.star-7{
+    animation-delay:1.1s;
+}
+
+.star-8{
+    animation-delay:2s;
+}
+
+.star-9{
+    animation-delay:.2s;
+}
+
+.star-10{
+    animation-delay:1.5s;
+}
+
+
+
+/* ========================= */
+/* CIELO DE ESTRELLAS */
+/* ========================= */
+
+.stars-section{
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:60px 20px;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(
+        circle at 50% 15%,
+        #111827 0%,
+        #090d16 35%,
+        #04070d 70%,
+        #010205 100%
+    );
+
+    color:white;
+}
+
+.stars-background{
+    position:relative;
+    
+    width:100%;
+    max-width:1000px;
+
+    min-height:80vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+
+
+.stars-header{
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+    max-width:560px;
+
+    text-align:center;
+}
+
+.stars-small-title{
+    color:#f9a8d4;
+    margin-bottom:12px;
+
+    color:#f9a8d4;
+
+    font-size:.9rem;
+
+    letter-spacing:2px;
+}
+
+.stars-title{
+    margin:0;
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:3.4rem;
+
+    line-height:1.2;
+
+    color:white;
+
+    text-shadow:
+    0 0 10px rgba(255,255,255,.2),
+    0 0 25px rgba(255,255,255,.08);
+}
+
+.stars-instruction{
+    margin-top:25px;
+
+    color:#f5d0fe;
+
+    font-size:.95rem;
+}
+
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:600px){
+
+    .stars-section{
+        padding:40px 15px;
+    }
+
+    .stars-background{
+        min-height:85vh;
+        position:relative;
+    }
+
+    .stars-header{
+        position:relative;
+
+        z-index:10;
+
+        width:72%;
+        max-width:260px;
+
+        margin:0 auto;
+    }
+
+    .stars-title{
+        font-size:2.15rem;
+
+        line-height:1.15;
+
+        max-width:245px;
+
+        margin:0 auto;
+    }
+    .stars-small-title{
+        font-size:.75rem;
+        margin-bottom:8px;
+    }
+
+    .stars-instruction{
+        margin-top:18px;
+        font-size:.8rem;
+    }
+
+    .video-next-message{
+        max-width:280px;
+
+        font-size:1.45rem;
+    }
+
+
+    /* ================================= */
+    /* ESTRELLAS - SOLO IPHONE /
+    /* ================================= */
+
+    .star-1{
+        top:5% !important;
+        left:7% !important;
+    }
+
+    .star-2{
+        top:14% !important;
+        right:18% !important;
+    }
+
+    .star-3{
+        top:29% !important;
+        left:2% !important;
+    }
+
+    .star-4{
+        top:25% !important;
+        right:-1% !important;
+    }
+
+    .star-5{
+        top:51% !important;
+        left:3% !important;
+    }
+
+    .star-6{
+        top:64% !important;
+        right:2% !important;
+    }
+
+    .star-7{
+        top:74% !important;
+        left:15% !important;
+    }
+
+    .star-8{
+        top:82% !important;
+        right:28% !important;
+    }
+
+    .star-9{
+        top:90% !important;
+        left:4% !important;
+    }
+
+    .star-10{
+        top:45% !important;
+        right:2% !important;
+    }
+    
+    .star-message-card{
+
+        position:relative;
+
+        width:100%;
+        max-width:420px;
+
+        padding:45px 30px 35px;
+
+        border-radius:24px;
+
+        background:
+            linear-gradient(
+                145deg,
+                #fff5fb,
+                #fce7f3
+            );
+
+        box-shadow:
+            0 20px 60px rgba(0,0,0,.35),
+            0 0 35px rgba(236,95,154,.15);
+
+        text-align:center;
+
+        transform:
+            translateY(25px)
+            scale(.85);
+
+        opacity:.5;
+
+        transition:
+            transform .5s cubic-bezier(.22,.8,.25,1),
+            opacity .5s ease;
+
+    }
+
+    .star-message-text{
+
+        font-size:.9rem;
+
+    }
+
+    .video-next{
+        position:fixed;
+
+        left:50%;
+        bottom:18px;
+
+        width:calc(100% - 30px);
+        max-width:330px;
+
+        transform:translate(-50%, 30px);
+    }
+
+    .video-next-message{
+
+        font-size:1.2rem;
+
+        white-space:normal;
+
+        text-align:center;
+
+        max-width:280px;
+
+        padding:8px 14px;
+
+    }
+
+    .stars-button{
+
+        min-height:50px;
+
+        min-width:180px;
+
+    }
+
+}
+
+/* ========================= */
+/* BOTÓN DESPUÉS DEL VIDEO */
+/* ========================= */
+
+.video-next-message{
+    position:relative;
+
+    margin:0 0 14px;
+
+    padding:10px 20px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.92);
+
+    color:#831843;
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:1.45rem;
+
+    line-height:1.3;
+
+    box-shadow:
+        0 8px 25px rgba(190,24,93,.16);
+
+    border:1px solid rgba(236,95,154,.16);
+
+    backdrop-filter:blur(10px);
+
+    text-align:center;
+}
+
+/* Corazones decorativos */
+
+.video-next-message::before{
+    content:"♡  ✦  ♡";
+
+    display:block;
+
+    margin-bottom:4px;
+
+    color:#e83e8c;
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:.65rem;
+
+    letter-spacing:6px;
+
+    opacity:.75;
+}
+
+/* ========================= */
+/* BOTÓN DESCUBRIR */
+/* ========================= */
+
+.stars-button{
+
+    position:relative;
+
+    min-height:50px;
+    min-width:180px;
+
+    padding:13px 28px;
+
+    border:none;
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ef72a8,
+            #e83e8c,
+            #d81b70
+        );
+
+    color:white;
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:.9rem;
+    font-weight:600;
+
+    letter-spacing:.3px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 8px 22px rgba(216,27,112,.28);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.stars-button::after{
+    content:"✦";
+
+    position:absolute;
+
+    right:16px;
+    top:8px;
+
+    font-size:.65rem;
+
+    color:rgba(255,255,255,.8);
+
+    animation:
+        buttonSparkle 2s ease-in-out infinite;
+}
+
+.stars-button:hover{
+    transform:translateY(-3px) scale(1.03);
+
+    box-shadow:
+        0 12px 28px rgba(216,27,112,.35);
+}
+
+@keyframes buttonSparkle{
+
+    0%,100%{
+        opacity:.5;
+        transform:scale(.9) rotate(0deg);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.15) rotate(10deg);
+    }
+
+}
+
+/* ========================= */
+/* CELULAR */
+/* ========================= */
+
+@media(max-width:600px){
+
+    .video-next-message{
+        max-width:280px;
+
+        font-size:1.45rem;
+
+        padding:9px 16px;
+    }
+
+    .stars-button{
+        min-height:50px;
+
+        min-width:180px;
+
+        padding:12px 24px;
+
+        font-size:.85rem;
+    }
+
+}
+
+
+/* ========================= */
+/* ESTRELLAS */
+/* ========================= */
+
+.star{
+    position:absolute;
+
+    z-index:3;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:42px;
+    height:42px;
+
+    color:#ffffff;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    line-height:1;
+
+    text-shadow:
+        0 0 5px rgba(255,255,255,.95),
+        0 0 12px rgba(255,255,255,.65),
+        0 0 24px rgba(255,255,255,.25);
+
+    transition:
+        transform .3s ease,
+        color .3s ease,
+        text-shadow .3s ease;
+}
+
+
+
+/* ========================= */
+/* DISTRIBUCIÓN DE ESTRELLAS */
+/* ========================= */
+
+.star-1{
+    top:7%;
+    left:14%;
+}
+
+.star-2{
+    top:17%;
+    right:8%;
+}
+
+.star-3{
+    top:37%;
+    left:4%;
+}
+
+.star-4{
+    top:27%;
+    right:22%;
+}
+
+.star-5{
+    top:67%;
+    left:10%;
+}
+
+.star-6{
+    top:55%;
+    right:5%;
+}
+
+.star-7{
+    bottom:8%;
+    left:29%;
+}
+
+.star-8{
+    bottom:15%;
+    right:15%;
+}
+
+.star-9{
+    top:48%;
+    left:22%;
+}
+
+.star-10{
+    top:78%;
+    right:35%;
+}
+
+
+/* Efecto al pasar el mouse */
+
+.star:hover{
+
+    transform:scale(1.3);
+
+    color:#f9a8d4;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,.9),
+        0 0 20px rgba(249,168,212,.8),
+        0 0 35px rgba(249,168,212,.45);
+}
+
+
+/* Animación de brillo */
+
+@keyframes starGlow{
+
+    0%,100%{
+
+        opacity:.65;
+
+        transform:scale(1);
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.15);
+    }
+
+}
+
+/* ================================= */
+/* ESTRELLAS PEQUEÑAS */
+/* ================================= */
+
+.small-star{
+    position:absolute;
+
+    z-index:1;
+
+    color:rgba(255,255,255,.65);
+
+    font-size:.9rem;
+
+    line-height:1;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    animation:smallStarTwinkle 3s ease-in-out infinite;
+}
+
+
+/* Posiciones */
+
+.ss1{
+    top:8%;
+    left:34%;
+}
+
+.ss2{
+    top:15%;
+    left:68%;
+    animation-delay:.8s;
+}
+
+.ss3{
+    top:27%;
+    left:7%;
+    animation-delay:1.5s;
+}
+
+.ss4{
+    top:33%;
+    left:82%;
+    animation-delay:2.1s;
+}
+
+.ss5{
+    top:44%;
+    left:16%;
+    animation-delay:.5s;
+}
+
+.ss6{
+    top:51%;
+    left:72%;
+    animation-delay:1.8s;
+}
+
+.ss7{
+    top:63%;
+    left:34%;
+    animation-delay:2.5s;
+}
+
+.ss8{
+    top:70%;
+    left:88%;
+    animation-delay:1.1s;
+}
+
+.ss9{
+    top:78%;
+    left:11%;
+    animation-delay:2.8s;
+}
+
+.ss10{
+    top:84%;
+    left:57%;
+    animation-delay:.3s;
+}
+
+.ss11{
+    top:22%;
+    left:47%;
+    animation-delay:1.3s;
+}
+
+.ss12{
+    top:58%;
+    left:91%;
+    animation-delay:2.2s;
+}
+
+.ss13{
+    top:39%;
+    left:91%;
+    animation-delay:.7s;
+}
+
+.ss14{
+    top:89%;
+    left:28%;
+    animation-delay:1.7s;
+}
+
+.ss15{
+    top:10%;
+    left:8%;
+    animation-delay:2.4s;
+}
+
+
+/* Brillo */
+
+@keyframes smallStarTwinkle{
+
+    0%,100%{
+        opacity:.25;
+        transform:scale(.8);
+    }
+
+    50%{
+        opacity:.8;
+        transform:scale(1.15);
+    }
+
+}
+
+/* ================================= */
+/* MENSAJE DE ESTRELLA */
+/* ================================= */
+
+.star-message-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:100;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    background:rgba(0,0,0,.65);
+
+    backdrop-filter:blur(6px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:
+        opacity .4s ease,
+        visibility .4s ease;
+
+}
+
+.star-message-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.star-message-card{
+
+    position:relative;
+
+    width:100%;
+    max-width:420px;
+
+    padding:45px 30px 35px;
+
+    border-radius:24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff5fb,
+            #fce7f3
+        );
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.35);
+
+    text-align:center;
+
+    transform:
+        translateY(25px)
+        scale(.9);
+
+    transition:
+        transform .4s cubic-bezier(.22,.8,.25,1);
+
+}
+
+.star-message-overlay.active
+.star-message-card{
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    opacity:1;
+
+}
+
+/* Estrella dentro del mensaje */
+
+.message-star{
+
+    margin-bottom:20px;
+
+    color:#ec4899;
+
+    font-size:3rem;
+
+    text-shadow:
+        0 0 10px rgba(236,72,153,.5),
+        0 0 25px rgba(236,72,153,.25);
+
+}
+
+/* Texto */
+
+.star-message-text{
+
+    margin:0;
+
+    color:#831843;
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+}
+
+/* Botón cerrar */
+
+.close-star-message{
+
+    position:absolute;
+
+    top:12px;
+    right:15px;
+
+    width:38px;
+    height:38px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(236,95,154,.1);
+
+    color:#be185d;
+
+    font-size:1.5rem;
+
+    line-height:1;
+
+    cursor:pointer;
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+
+}
+
+.close-star-message:hover{
+
+    transform:rotate(90deg);
+
+    background:rgba(236,95,154,.2);
+
+}
+
+/* ================================= */
+/* ANIMACIÓN AL TOCAR UNA ESTRELLA */
+/* ================================= */
+
+.star.star-selected{
+    animation:starSelected .6s ease forwards;
+}
+
+@keyframes starSelected{
+
+    0%{
+        transform:scale(1);
+        filter:brightness(1);
+    }
+
+    40%{
+        transform:scale(1.6);
+        filter:brightness(2);
+    }
+
+    70%{
+        transform:scale(.9);
+        filter:brightness(1.5);
+    }
+
+    100%{
+        transform:scale(1);
+        filter:brightness(1);
+    }
+
+}
+
+/* ================================= */
+/* BOTÓN FLOTANTE DEL VIDEO */
+/* ================================= */
+
+.video-next{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:24px;
+
+    z-index:200;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:max-content;
+
+    transform:
+        translate(-50%, 30px);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:
+        opacity .7s ease,
+        transform .7s cubic-bezier(.22,.8,.25,1);
+}
+
+.video-next.show{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+    transform:
+        translate(-50%, 0);
+}
+
+.video-next-message{
+
+    margin:0 0 12px;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.92);
+
+    color:#831843;
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:1.35rem;
+
+    white-space:nowrap;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.15);
+
+    backdrop-filter:blur(8px);
+}
+
+ /* ========================= */
+/* SPOTIFY */
+/* ========================= */
+
+.spotify-section{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:70px 20px;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255,183,218,.55),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(244,143,177,.35),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #ffe8f3,
+            #ffd4e7,
+            #fff0f7,
+            #fce0ee
+        );
+}
+
+.spotify-content{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+    max-width:760px;
+}
+
+/* ========================= */
+/* DECORACIÓN SUPERIOR */
+/* ========================= */
+
+.spotify-top-decoration{
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:12px;
+
+    color:#e83e8c;
+
+    font-size:.9rem;
+
+    opacity:.7;
+}
+
+.spotify-top-decoration span:nth-child(2){
+
+    font-size:.55rem;
+
+}
+
+/* ========================= */
+/* TÍTULOS */
+/* ========================= */
+
+.spotify-small-title{
+
+    margin:0 0 9px;
+
+    color:#db2777;
+
+    font-size:.85rem;
+
+    letter-spacing:2.5px;
+
+    text-transform:uppercase;
+}
+
+.spotify-title{
+
+    max-width:600px;
+
+    margin:0 auto;
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:3.2rem;
+
+    line-height:1.15;
+
+    color:#831843;
+
+    text-shadow:
+        0 4px 15px rgba(131,24,67,.10);
+}
+
+.spotify-description{
+
+    max-width:500px;
+
+    margin:17px auto 60px;
+
+    color:#8e2455;
+
+    font-size:.92rem;
+
+    line-height:1.7;
+}
+
+/* ========================= */
+/* TARJETA PRINCIPAL */
+/* ========================= */
+
+.spotify-card{
+
+    position:relative;
+
+    width:100%;
+    max-width:440px;
+
+    margin:0 auto;
+
+    padding:30px 27px;
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.96),
+            rgba(255,244,249,.92)
+        );
+
+    border:1px solid rgba(255,255,255,.95);
+
+    box-shadow:
+        0 25px 55px rgba(190,24,93,.14),
+        0 0 0 7px rgba(236,95,154,.06);
+
+    backdrop-filter:blur(12px);
+
+    overflow:hidden;
+}
+
+/* Detalle superior */
+
+.spotify-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:18%;
+
+    width:64%;
+    height:3px;
+
+    border-radius:0 0 10px 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f9a8d4,
+            #ec4899,
+            #f9a8d4
+        );
+
+    opacity:.8;
+}
+
+/* Brillo suave */
+
+.spotify-card::after{
+
+    content:"♡";
+
+    position:absolute;
+
+    top:14px;
+    right:18px;
+
+    color:#f3a0c3;
+
+    font-size:1rem;
+
+    opacity:.55;
+}
+
+/* ========================= */
+/* PORTADA */
+/* ========================= */
+
+.spotify-cover{
+
+    position:relative;
+
+    width:230px;
+    height:230px;
+
+    margin:0 auto 23px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(255,255,255,.28),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #f9a8d4,
+            #ec4899,
+            #d946ef
+        );
+
+    box-shadow:
+        0 16px 35px rgba(236,72,153,.28),
+        inset 0 1px 0 rgba(255,255,255,.25);
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+.spotify-cover:hover{
+
+    transform:translateY(-4px) rotate(-1deg);
+
+    box-shadow:
+        0 22px 45px rgba(236,72,153,.32);
+
+}
+
+/* Decoraciones de portada */
+
+.spotify-cover-decoration{
+
+    position:absolute;
+
+    top:16px;
+    right:20px;
+
+    color:rgba(255,255,255,.82);
+
+    font-size:1.5rem;
+}
+
+.spotify-cover-stars{
+
+    position:absolute;
+
+    top:16px;
+    left:20px;
+
+    color:rgba(255,255,255,.65);
+
+    font-size:.65rem;
+
+    letter-spacing:2px;
+}
+
+.spotify-cover p{
+
+    margin:0;
+
+    color:white;
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:2.6rem;
+
+    text-shadow:
+        0 4px 12px rgba(131,24,67,.15);
+}
+
+.spotify-cover span{
+
+    margin-top:8px;
+
+    font-size:2rem;
+}
+
+.spotify-cover-bottom{
+
+    position:absolute;
+
+    bottom:14px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:100%;
+
+    color:rgba(255,255,255,.65);
+
+    font-size:.7rem;
+
+    letter-spacing:4px;
+}
+
+/* ========================= */
+/* INFORMACIÓN */
+/* ========================= */
+
+.spotify-card-label{
+
+    margin-bottom:7px;
+
+    color:#db2777;
+
+    font-size:.62rem;
+
+    letter-spacing:2px;
+
+    opacity:.7;
+}
+
+.spotify-card h3{
+
+    margin:0 0 9px;
+
+    color:#831843;
+
+    font-size:1.25rem;
+}
+
+.spotify-card-text{
+
+    max-width:330px;
+
+    margin:0 auto 25px;
+
+    color:#8e2455;
+
+    font-size:.85rem;
+
+    line-height:1.65;
+}
+
+/* Separador decorativo */
+
+.spotify-card-text::after{
+
+    content:"♡  ✦  ♡";
+
+    display:block;
+
+    margin-top:15px;
+
+    color:#e83e8c;
+
+    font-size:.65rem;
+
+    letter-spacing:4px;
+
+    opacity:.65;
+}
+
+/* ========================= */
+/* BOTÓN SPOTIFY */
+/* ========================= */
+
+.spotify-button{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:9px;
+
+    min-height:50px;
+
+    min-width:215px;
+
+    padding:14px 25px;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #20c968,
+            #1db954
+        );
+
+    color:white;
+
+    text-decoration:none;
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    box-shadow:
+        0 9px 23px rgba(29,185,84,.25);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.spotify-button-icon{
+
+    font-size:1.15rem;
+
+    line-height:1;
+}
+
+.spotify-button:hover{
+
+    transform:translateY(-4px) scale(1.03);
+
+    box-shadow:
+        0 13px 28px rgba(29,185,84,.35);
+
+}
+
+/* ========================= */
+/* DECORACIÓN INFERIOR */
+/* ========================= */
+
+.spotify-bottom-decoration{
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:14px;
+
+    margin-top:18px;
+
+    color:#e83e8c;
+
+    font-size:.8rem;
+
+    opacity:.6;
+}
+
+.spotify-bottom-decoration span:nth-child(2){
+
+    font-size:.55rem;
+
+}
+
+/* ========================= */
+/* DECORACIONES DEL FONDO */
+/* ========================= */
+
+.spotify-bg-decoration{
+
+    position:absolute;
+
+    z-index:1;
+
+    color:#e83e8c;
+
+    opacity:.32;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    text-shadow:
+        0 0 14px rgba(232,62,140,.18);
+
+    animation:
+        spotifyFloat 6s ease-in-out infinite;
+}
+
+.spotify-bg-1{
+
+    top:13%;
+    left:8%;
+
+    font-size:2rem;
+}
+
+.spotify-bg-2{
+
+    top:25%;
+    left:20%;
+
+    font-size:.8rem;
+
+    animation-delay:1s;
+}
+
+.spotify-bg-3{
+
+    top:17%;
+    right:10%;
+
+    font-size:1.4rem;
+
+    animation-delay:2s;
+}
+
+.spotify-bg-4{
+
+    top:43%;
+    right:7%;
+
+    font-size:2rem;
+
+    animation-delay:3s;
+}
+
+.spotify-bg-5{
+
+    bottom:17%;
+    left:9%;
+
+    font-size:1.3rem;
+
+    animation-delay:1.5s;
+}
+
+.spotify-bg-6{
+
+    bottom:13%;
+    right:11%;
+
+    font-size:1.7rem;
+
+    animation-delay:2.5s;
+}
+
+/* ========================= */
+/* ANIMACIÓN */
+/* ========================= */
+
+@keyframes spotifyFloat{
+
+    0%,100%{
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-12px)
+            rotate(5deg);
+
+    }
+
+}
+
+/* ========================= */
+/* CELULAR */
+/* ========================= */
+
+@media(max-width:600px){
+
+    .spotify-section{
+
+        padding:50px 15px;
+
+    }
+
+    .spotify-small-title{
+
+        font-size:.7rem;
+
+        letter-spacing:2px;
+
+    }
+
+    .spotify-title{
+
+        max-width:310px;
+
+        font-size:2.45rem;
+
+    }
+
+    .spotify-description{
+
+        max-width:310px;
+
+        margin:15px auto 35px;
+
+        font-size:.83rem;
+
+    }
+
+    .spotify-card{
+
+        max-width:330px;
+
+        padding:20px;
+
+        border-radius:23px;
+
+    }
+
+    .spotify-cover{
+
+        width:200px;
+        height:200px;
+
+        border-radius:19px;
+
+    }
+
+    .spotify-cover p{
+
+        font-size:2.3rem;
+
+    }
+
+    .spotify-cover span{
+
+        font-size:1.8rem;
+
+    }
+
+    .spotify-card-label{
+
+        font-size:.55rem;
+
+    }
+
+    .spotify-card h3{
+
+        font-size:1.1rem;
+
+    }
+
+    .spotify-card-text{
+
+        font-size:.8rem;
+
+        margin-bottom:22px;
+
+    }
+
+    .spotify-button{
+
+        width:100%;
+
+        min-width:0;
+
+        max-width:245px;
+
+        min-height:50px;
+
+        font-size:.82rem;
+
+    }
+
+    .spotify-bg-decoration{
+
+        opacity:.22;
+
+    }
+
+}
+
+.spotify-card-label{
+
+    display:inline-block;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    background:rgba(236,95,154,.08);
+
+    color:#db2777;
+
+    font-size:.58rem;
+
+    letter-spacing:2px;
+
+    opacity:.85;
+}
+
+/* ================================= */
+/* FINAL DEL CIELO */
+/* ================================= */
+
+.stars-complete{
+
+    position:fixed;
+
+    left:50%;
+    bottom:24px;
+
+    z-index:50;
+
+    width:calc(100% - 40px);
+    max-width:450px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    transform:translate(-50%, 30px);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.22,.8,.25,1);
+}
+
+.stars-complete.show{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+    transform:translate(-50%, 0);
+}
+
+.stars-complete-message{
+
+    margin:0 0 12px;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.92);
+
+    color:#fce7f3;
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:1.5rem;
+
+    text-align:center;
+
+    color:#831843;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.18);
+
+    backdrop-filter:blur(8px);
+}
+
+.spotify-next-button{
+
+    min-height:50px;
+
+    padding:14px 24px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        135deg,
+        #ec4899,
+        #d946ef
+    );
+
+    color:white;
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 10px 25px rgba(217,70,239,.3);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.spotify-next-button:hover{
+
+    transform:translateY(-4px) scale(1.03);
+
+    box-shadow:
+        0 15px 30px rgba(217,70,239,.4);
+}
+
+@media(max-width:600px){
+
+    .stars-complete{
+
+        bottom:18px;
+
+        width:calc(100% - 30px);
+
+        max-width:330px;
+
+    }
+
+    .stars-complete-message{
+
+        max-width:290px;
+
+        font-size:1.3rem;
+
+    }
+
+    .spotify-next-button{
+
+        min-height:50px;
+
+        width:100%;
+
+    }
+
+}
+
+/* ================================= */
+/* ORIÓN */
+/* ================================= */
+
+.orion-section{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:70px 20px;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff5fb,
+            #fce7f3,
+            #ffe4f1
+        );
+
+    overflow:hidden;
+}
+
+.orion-content{
+
+    width:100%;
+    max-width:650px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.orion-small-title{
+
+    margin-bottom:10px;
+
+    color:#db2777;
+
+    font-size:.9rem;
+
+    letter-spacing:2px;
+}
+
+.orion-title{
+
+    max-width:550px;
+
+    margin:0 auto;
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:3.2rem;
+
+    line-height:1.2;
+
+    color:#831843;
+}
+
+.orion-description{
+
+    max-width:450px;
+
+    margin:18px auto 35px;
+
+    color:#8e2455;
+
+    font-size:.95rem;
+
+    line-height:1.7;
+}
+
+
+/* ================================= */
+/* IMAGEN DE ORIÓN */
+/* ================================= */
+
+.orion-image-container{
+
+    position:relative;
+
+    width:260px;
+    height:260px;
+
+    margin:0 auto 30px;
+
+    padding:8px;
+
+    border-radius:30px;
+
+    background:
+        rgba(255,255,255,.75);
+
+    border:2px solid
+        rgba(255,255,255,.9);
+
+    box-shadow:
+        0 20px 45px
+        rgba(190,24,93,.16);
+
+    backdrop-filter:blur(8px);
+
+    animation:
+        orionFloat 4s ease-in-out infinite;
+}
+
+.orion-image{
+
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    border-radius:22px;
+}
+
+
+/* ================================= */
+/* BOTÓN COMIDA */
+/* ================================= */
+
+.orion-feed-button{
+
+    min-height:52px;
+
+    padding:14px 28px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ec4899,
+            #d946ef
+        );
+
+    color:white;
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 10px 25px
+        rgba(217,70,239,.25);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.orion-feed-button:hover{
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+        0 15px 30px
+        rgba(217,70,239,.35);
+}
+
+
+/* ================================= */
+/* REACCIÓN */
+/* ================================= */
+
+.orion-reaction{
+
+    display:none;
+
+    flex-direction:column;
+    align-items:center;
+
+    margin-top:25px;
+
+    animation:
+        fadeUpOrion .7s ease;
+}
+
+.orion-reaction.show{
+
+    display:flex;
+}
+
+.orion-reaction p{
+
+    margin:0 0 16px;
+
+    color:#831843;
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:1.7rem;
+
+    line-height:1.3;
+}
+
+
+/* ================================= */
+/* SEGUNDO BOTÓN */
+/* ================================= */
+
+.orion-message-button{
+
+    min-height:48px;
+
+    padding:13px 24px;
+
+    border:2px solid #ec4899;
+
+    border-radius:50px;
+
+    background:white;
+
+    color:#db2777;
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+}
+
+.orion-message-button:hover{
+
+    transform:translateY(-3px);
+
+    background:#fff0f7;
+}
+
+
+/* ================================= */
+/* ANIMACIONES */
+/* ================================= */
+
+@keyframes orionFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+}
+
+@keyframes fadeUpOrion{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* ================================= */
+/* IPHONE */
+/* ================================= */
+
+@media(max-width:600px){
+
+    .orion-section{
+
+        padding:50px 15px;
+    }
+
+    .orion-title{
+
+        max-width:300px;
+
+        font-size:2.45rem;
+    }
+
+    .orion-description{
+
+        max-width:290px;
+
+        font-size:.88rem;
+    }
+
+    .orion-image-container{
+
+        width:min(78vw,280px);
+        height:min(78vw,280px);
+
+        border-radius:24px;
+    }
+
+    .orion-feed-button{
+
+        width:100%;
+        max-width:290px;
+    }
+
+    .orion-reaction p{
+
+        max-width:280px;
+
+        font-size:1.45rem;
+    }
+
+    .orion-message-button{
+
+        width:100%;
+        max-width:290px;
+    }
+
+}
+
+/* ================================= */
+/* MENSAJE FINAL DE ORIÓN */
+/* ================================= */
+
+.orion-final{
+    display:none;
+
+    flex-direction:column;
+    align-items:center;
+
+    margin-top:28px;
+
+    padding:25px 20px;
+
+    max-width:430px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.8);
+
+    box-shadow:
+        0 15px 40px rgba(190,24,93,.15);
+
+    animation:
+        orionFinalAppear .9s ease;
+}
+
+.orion-final.show{
+    display:flex;
+}
+
+.orion-final-message{
+    margin:0;
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:2.5rem;
+
+    line-height:1.2;
+
+    color:#d81b60;
+}
+
+.orion-final-love{
+    margin:12px 0 6px;
+
+    color:#831843;
+
+    font-size:1rem;
+}
+
+.orion-signature{
+    color:#be185d;
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:1.2rem;
+}
+
+@keyframes orionFinalAppear{
+
+    from{
+        opacity:0;
+        transform:
+            translateY(25px)
+            scale(.9);
+    }
+
+    to{
+        opacity:1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .orion-final{
+        max-width:300px;
+        padding:22px 18px;
+    }
+
+    .orion-final-message{
+        font-size:2.1rem;
+    }
+
+}
+
+/* ================================= */
+/* BOTÓN HACIA ORIÓN */
+/* ================================= */
+
+.orion-next-button{
+
+    margin-top:15px;
+
+    min-height:48px;
+
+    padding:13px 24px;
+
+    border:2px solid #ec4899;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.8);
+
+    color:#db2777;
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 8px 20px rgba(236,95,154,.12);
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+.orion-next-button:hover{
+
+    transform:translateY(-3px);
+
+    background:#fff0f7;
+
+    box-shadow:
+        0 12px 25px rgba(236,95,154,.2);
+}
+
+@media(max-width:600px){
+
+    .orion-next-button{
+
+        width:100%;
+
+        max-width:280px;
+
+    }
+
+}
+
+/* ================================= */
+/* BOTÓN FINAL DE ORIÓN */
+/* ================================= */
+
+.orion-final-button{
+
+    margin-top:22px;
+
+    min-height:50px;
+
+    padding:13px 24px;
+
+    border:2px solid #ec4899;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.85);
+
+    color:#db2777;
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 8px 20px rgba(236,95,154,.12);
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+.orion-final-button:hover{
+
+    transform:translateY(-3px);
+
+    background:#fff0f7;
+
+    box-shadow:
+        0 12px 25px rgba(236,95,154,.2);
+}
+
+@media(max-width:600px){
+
+    .orion-final-button{
+
+        width:100%;
+
+        max-width:280px;
+
+    }
+
+}
+
+/* ================================= */
+/* SECCIÓN FINAL */
+/* ================================= */
+
+.final-section{
+
+    position:relative;
+
+    min-height:100vh;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:60px 20px;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #111827 0%,
+            #080c14 38%,
+            #03050a 72%,
+            #010204 100%
+        );
+
+    color:white;
+
+}
+
+.final-content{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:650px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.final-small-title{
+
+    margin-bottom:12px;
+
+    color:#fbcfe8;
+
+    font-size:.85rem;
+
+    letter-spacing:2px;
+
+}
+
+.final-title{
+
+    max-width:580px;
+
+    margin:0;
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:3.2rem;
+
+    line-height:1.2;
+
+    font-weight:700;
+
+    color:#fff;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,.12),
+        0 0 25px rgba(255,255,255,.05);
+
+}
+
+.final-instruction{
+
+    margin:25px 0 40px;
+
+    color:#d1d5db;
+
+    font-size:.9rem;
+
+}
+
+
+/* ================================= */
+/* ESTRELLA FINAL */
+/* ================================= */
+
+.final-star{
+
+    position:relative;
+
+    width:100px;
+    height:100px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:0;
+
+    border:none;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:4.5rem;
+
+    line-height:1;
+
+    cursor:pointer;
+
+    border-radius:50%;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,.9),
+        0 0 20px rgba(255,255,255,.65),
+        0 0 40px rgba(255,255,255,.3);
+
+    animation:
+        finalStarPulse 3s ease-in-out infinite;
+
+    transition:
+        color .3s ease,
+        transform .3s ease,
+        text-shadow .3s ease;
+
+}
+
+.final-star::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:15px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.08),
+            transparent 70%
+        );
+
+    filter:blur(5px);
+
+    pointer-events:none;
+
+}
+
+.final-star:hover{
+
+    transform:scale(1.15);
+
+    color:#fbcfe8;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,1),
+        0 0 25px rgba(251,207,232,.9),
+        0 0 50px rgba(251,207,232,.5);
+
+}
+
+.final-star:active{
+
+    transform:scale(.92);
+
+}
+
+
+/* ================================= */
+/* PEQUEÑAS LUCES DE FONDO */
+/* ================================= */
+
+.final-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.6) 0,
+            rgba(255,255,255,.6) 1px,
+            transparent 1.5px
+        );
+
+    background-size:
+        95px 95px;
+
+    background-position:
+        20px 15px;
+
+    opacity:.18;
+
+    pointer-events:none;
+
+}
+
+
+/* ================================= */
+/* ANIMACIONES */
+/* ================================= */
+
+@keyframes finalStarPulse{
+
+    0%,100%{
+
+        opacity:.7;
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+
+/* ================================= */
+/* IPHONE */
+/* ================================= */
+
+@media(max-width:600px){
+
+    .final-section{
+
+        padding:50px 15px;
+
+    }
+
+    .final-small-title{
+
+        font-size:.75rem;
+
+    }
+
+    .final-title{
+
+        max-width:290px;
+
+        font-size:2.45rem;
+
+        line-height:1.15;
+
+    }
+
+    .final-instruction{
+
+        max-width:260px;
+
+        font-size:.82rem;
+
+        line-height:1.5;
+
+        margin-bottom:32px;
+
+    }
+
+    .final-star{
+
+        width:90px;
+        height:90px;
+
+        font-size:4rem;
+
+    }
+
+}
+
+/* ================================= */
+/* PANTALLA DEL VIDEO FINAL */
+/* ================================= */
+
+.final-video-section{
+
+    position:relative;
+
+    min-height:100vh;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:60px 20px;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #111827 0%,
+            #080c14 38%,
+            #03050a 72%,
+            #010204 100%
+        );
+
+    color:white;
+}
+
+.final-video-content{
+
+    width:100%;
+    max-width:850px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    text-align:center;
+}
+
+.final-video-message{
+
+    margin:0 0 25px;
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:2.2rem;
+
+    color:#fdf2f8;
+
+}
+
+.final-video-card{
+
+    width:100%;
+
+    max-width:750px;
+
+    padding:8px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.07);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.45);
+
+    backdrop-filter:blur(6px);
+
+}
+
+.final-video-card video{
+
+    display:block;
+
+    width:100%;
+
+    max-width:100%;
+
+    height:auto;
+
+    max-height:65vh;
+
+    margin:0 auto;
+
+    border-radius:15px;
+
+    background:#000;
+
+}
+
+.final-video-hint{
+
+    margin:18px 0 0;
+
+    color:#9ca3af;
+
+    font-size:.8rem;
+
+    letter-spacing:1px;
+
+}
+
+
+/* ================================= */
+/* IPHONE */
+/* ================================= */
+
+@media(max-width:600px){
+
+    .final-video-section{
+
+        padding:50px 15px;
+
+    }
+
+    .final-video-message{
+
+        font-size:1.7rem;
+
+    }
+
+    .final-video-card{
+
+        padding:5px;
+
+        border-radius:16px;
+
+    }
+
+    .final-video-card video{
+
+        border-radius:11px;
+
+        max-height:60vh;
+
+    }
+
+    .final-video-hint{
+
+        font-size:.75rem;
+
+    }
+
+}
+
+/* ================================= */
+/* MENSAJE FINAL */
+/* ================================= */
+
+.goodbye-section{
+
+    position:relative;
+
+    min-height:100vh;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:60px 20px;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            #111827 0%,
+            #080c14 40%,
+            #03050a 75%,
+            #010204 100%
+        );
+
+    color:white;
+
+}
+
+.goodbye-content{
+
+    width:100%;
+    max-width:600px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    text-align:center;
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+}
+
+.goodbye-section.visible
+.goodbye-content{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:
+        opacity 1.5s ease,
+        transform 1.5s ease;
+
+}
+
+
+/* ================================= */
+/* CORAZÓN */
+/* ================================= */
+
+.goodbye-heart{
+
+    margin-bottom:20px;
+
+    color:#f9a8d4;
+
+    font-size:2.5rem;
+
+    text-shadow:
+        0 0 12px rgba(249,168,212,.5),
+        0 0 30px rgba(249,168,212,.2);
+
+    animation:
+        goodbyeHeart 2.5s ease-in-out infinite;
+
+}
+
+
+/* ================================= */
+/* TEXTOS */
+/* ================================= */
+
+.goodbye-small{
+
+    margin-bottom:10px;
+
+    color:#9ca3af;
+
+    font-size:.85rem;
+
+    letter-spacing:2px;
+
+}
+
+.goodbye-title{
+
+    margin:0;
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:3.7rem;
+
+    line-height:1.15;
+
+    color:#fff;
+
+    text-shadow:
+        0 0 12px rgba(255,255,255,.1);
+
+}
+
+.goodbye-message{
+
+    max-width:470px;
+
+    margin:25px auto 0;
+
+    color:#d1d5db;
+
+    font-size:.95rem;
+
+    line-height:1.8;
+
+}
+
+.goodbye-love{
+
+    margin:28px 0 8px;
+
+    color:#fbcfe8;
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:2rem;
+
+}
+
+.goodbye-signature{
+
+    margin:0;
+
+    color:#9ca3af;
+
+    font-size:.8rem;
+
+    letter-spacing:1px;
+
+}
+
+
+/* ================================= */
+/* CORAZÓN ANIMADO */
+/* ================================= */
+
+@keyframes goodbyeHeart{
+
+    0%,100%{
+
+        transform:scale(1);
+
+        opacity:.7;
+
+    }
+
+    50%{
+
+        transform:scale(1.12);
+
+        opacity:1;
+
+    }
+
+}
+
+
+/* ================================= */
+/* IPHONE */
+/* ================================= */
+
+@media(max-width:600px){
+
+    .goodbye-section{
+
+        padding:50px 20px;
+
+    }
+
+    .goodbye-title{
+
+        max-width:300px;
+
+        font-size:2.8rem;
+
+    }
+
+    .goodbye-message{
+
+        max-width:290px;
+
+        font-size:.88rem;
+
+        line-height:1.7;
+
+    }
+
+    .goodbye-love{
+
+        font-size:1.7rem;
+
+    }
+
+}

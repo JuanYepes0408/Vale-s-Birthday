@@ -1,0 +1,468 @@
+.content{
+    animation:fadeUp 1.2s ease;
+}
+
+.heart{
+    animation:float 5s ease-in-out infinite;
+}
+
+.h2{
+    animation-delay:1.5s;
+}
+
+.h3{
+    animation-delay:3s;
+}
+
+.star{
+    animation:twinkle 2.5s infinite;
+}
+
+.s2{
+    animation-delay:1s;
+}
+
+.s3{
+    animation-delay:2s;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-18px);
+    }
+
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+        opacity:.3;
+        transform:scale(1);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.3);
+    }
+
+}
+
+.stars-button{
+    position:relative;
+    overflow:hidden;
+}
+
+.stars-button::after{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:80%;
+    height:100%;
+
+    background:rgba(255,255,255,.3);
+
+    transform:skewX(-25deg);
+
+    animation:buttonShine 3s infinite;
+}
+
+@keyframes buttonShine{
+
+    0%{
+        left:-120%;
+    }
+
+    30%{
+        left:140%;
+    }
+
+    100%{
+        left:140%;
+    }
+
+}
+
+/* ================================= */
+/* DECORACIÓN DEL VIDEO */
+/* ================================= */
+
+.video-decoration{
+    display:flex;
+    flex-direction:row;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:18px;
+
+    width:100%;
+
+    margin:0 auto 30px;
+
+    color:#ec5f9a;
+
+    font-size:1.2rem;
+
+    white-space:nowrap;
+}
+
+.video-decoration span{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+
+    animation:sparkleFloat 3s ease-in-out infinite;
+}
+
+.video-decoration span:nth-child(1){
+    animation-delay:0s;
+}
+
+.video-decoration span:nth-child(2){
+    animation-delay:.3s;
+}
+
+.video-decoration span:nth-child(3){
+    animation-delay:.6s;
+}
+
+.video-decoration span:nth-child(4){
+    animation-delay:.9s;
+}
+
+.video-decoration span:nth-child(5){
+    animation-delay:1.2s;
+}
+
+.video-decoration span:nth-child(6){
+    animation-delay:1.5s;
+}
+
+.video-decoration span:nth-child(7){
+    animation-delay:1.8s;
+}
+
+.video-decoration span:nth-child(8){
+    animation-delay:2.1s;
+}
+
+@media(max-width:600px){
+
+    .video-decoration{
+        gap:10px;
+        font-size:1rem;
+    }
+
+}
+
+@keyframes starPulse{
+
+    0%,100%{
+        opacity:.5;
+        transform:scale(1);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.2);
+    }
+
+}
+
+@keyframes heartFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-5px);
+    }
+
+}
+
+/* ================================= */
+/* BRILLITOS DEL VIDEO */
+/* ================================= */
+
+.video-sparkles{
+    display:flex;
+
+    justify-content:center;
+
+    gap:28px;
+
+    margin-bottom:12px;
+
+    color:#f472b6;
+
+    font-size:1rem;
+
+    opacity:.7;
+}
+
+.video-sparkles span{
+    animation:sparkleFloat 3s ease-in-out infinite;
+}
+
+.video-sparkles span:nth-child(2){
+    animation-delay:.4s;
+}
+
+.video-sparkles span:nth-child(3){
+    animation-delay:.8s;
+}
+
+.video-sparkles span:nth-child(4){
+    animation-delay:1.2s;
+}
+
+.video-sparkles span:nth-child(5){
+    animation-delay:1.6s;
+}
+
+@keyframes sparkleFloat{
+
+    0%,100%{
+        transform:translateY(0);
+        opacity:.5;
+    }
+
+    50%{
+        transform:translateY(-6px);
+        opacity:1;
+    }
+
+}
+
+/* ================================= */
+/* ESTRELLA DEL MENSAJE */
+/* ================================= */
+
+.message-star{
+    animation:messageStarGlow 2s ease-in-out infinite;
+}
+
+@keyframes messageStarGlow{
+
+    0%,100%{
+        transform:scale(1);
+        opacity:.7;
+    }
+
+    50%{
+        transform:scale(1.15);
+        opacity:1;
+    }
+
+}
+
+/* ================================= */
+/* ANIMACIONES DE ORIÓN */
+/* ================================= */
+
+.orion-changing{
+
+    animation:
+        orionChange .5s ease;
+}
+
+@keyframes orionChange{
+
+    0%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+    50%{
+        transform:scale(.92);
+        opacity:.35;
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+.orion-happy{
+
+    animation:
+        orionHappy .7s ease;
+}
+
+@keyframes orionHappy{
+
+    0%{
+        transform:scale(.92);
+    }
+
+    60%{
+        transform:scale(1.06);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+/* ================================= */
+/* CORAZONES DE ORIÓN */
+/* ================================= */
+
+.orion-heart{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    z-index:10;
+
+    font-size:1.4rem;
+
+    pointer-events:none;
+
+    animation:
+        orionHeartFloat 1.5s ease-out
+        var(--heart-delay)
+        forwards;
+
+}
+
+@keyframes orionHeartFloat{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(.5);
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+            translate(
+                calc(-50% + var(--heart-x)),
+                -150px
+            )
+            scale(1.1);
+
+    }
+
+}
+
+/* ================================= */
+/* ANIMACIÓN FINAL DE ORIÓN */
+/* ================================= */
+
+.orion-final-pet{
+    animation:
+        orionFinalPet .8s ease;
+}
+
+@keyframes orionFinalPet{
+
+    0%{
+        transform:scale(1);
+    }
+
+    30%{
+        transform:scale(1.08) rotate(-2deg);
+    }
+
+    60%{
+        transform:scale(1.05) rotate(2deg);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+/* ================================= */
+/* APERTURA DE ESTRELLA FINAL */
+/* ================================= */
+
+.final-star-open{
+
+    animation:
+        finalStarOpen .8s ease forwards !important;
+
+}
+
+@keyframes finalStarOpen{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    35%{
+
+        transform:scale(1.35);
+
+        opacity:1;
+
+    }
+
+    70%{
+
+        transform:scale(.8);
+
+        opacity:.75;
+
+    }
+
+    100%{
+
+        transform:scale(3);
+
+        opacity:0;
+
+    }
+
+}
